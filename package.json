@@ -9,10 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ar-js-org/ar.js": "^3.4.5",
     "@element-plus/icons-vue": "^2.1.0",
+    "@vue-leaflet/vue-leaflet": "^0.10.1",
     "aframe": "^1.4.2",
+    "aframe-ar": "^0.2.1-a",
+    "aframe-extras": "^7.0.0",
+    "aframe-look-at-component": "^1.0.0",
     "element-plus": "^2.3.7",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-iframes": "^0.0.20",
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
