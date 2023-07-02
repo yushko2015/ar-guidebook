@@ -1,13 +1,13 @@
 <script>
-import NavigationBar from './components/NavigationBar.vue'
-
+// import NavigationBar from './components/NavigationBar.vue'
+ import AddNewLocation from './components/AddNewLocation.vue'
 export default {
-  components: { NavigationBar },
+   components: { AddNewLocation },
 }
 </script>
 
 <template>
-  <navigation-bar></navigation-bar>
+ <add-new-location>s</add-new-location>
 </template>
 <style scoped>
 </style>
