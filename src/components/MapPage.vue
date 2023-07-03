@@ -96,8 +96,8 @@ export default {
 }
 </style>
 <style>
-.leaflet-marker-pane img {
+/* .leaflet-marker-pane img {
     width: 6vw!important;
     height: 7vh!important;
-}
+} */
 </style>
