@@ -19,7 +19,6 @@ export default {
   beforeMount() {
     axios({ url: "/api/locations", method: "GET" })
       .then((resp) => {
-        console.log(resp)
         this.locations = resp.data;
       })
       .catch((err) => {

@@ -8,14 +8,14 @@
     <el-menu-item index="1">
       <router-link to="/">
         <el-icon >
-          <location style="width: 5rem; height: 5rem;" />
+          <Compass style="width: 5rem; height: 5rem;" />
         </el-icon>
       </router-link>
     </el-menu-item>
     <el-menu-item index="2">
       <router-link to="/map">
         <el-icon>
-          <Compass style="width: 5rem; height: 5rem;" />
+          <MapLocation style="width: 5rem; height: 5rem;" />
         </el-icon>
       </router-link>  
     </el-menu-item>

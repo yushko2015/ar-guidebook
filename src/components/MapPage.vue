@@ -18,6 +18,20 @@
       :key="index"
     ></l-marker>
   </l-map>
+  <el-button
+    v-if="isAddMarkerVisible"
+    class="save-location-button"
+    type="warning"
+    @click="showAddLocationForm = !showAddLocationForm"
+  >
+    <el-icon><AddLocation style="width: 6rem; height: 6rem" /></el-icon>
+  </el-button>
+  <add-new-location
+    :isVisible="showAddLocationForm"
+    :locationData="markers[0]"
+    @update:isVisible="onIsVisibleUpdate"
+    @saved="onLocationSaved"
+  ></add-new-location>
 </template>
 <script>
 import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet";
@@ -33,7 +47,13 @@ export default {
     return {
       zoom: 20,
       markers: [],
+      showAddLocationForm: false,
     };
+  },
+  computed: {
+    isAddMarkerVisible() {
+      return this.markers.length > 0 && !this.showAddLocationForm;
+    },
   },
   methods: {
     addMarker(event) {
@@ -52,6 +72,32 @@ export default {
         });
       }
     },
+    onIsVisibleUpdate(value) {
+        this.showAddLocationForm = value
+    },
+    onLocationSaved() {
+        this.markers = [];
+    }
   },
 };
 </script>
+<style scoped>
+.save-location-button {
+  z-index: 1000;
+  width: 10vw;
+  height: 6vh;
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+}
+.save-location-button .el-icon {
+  width: 5vw;
+  height: 5vh;
+}
+</style>
+<style>
+.leaflet-marker-pane img {
+    width: 5vw!important;
+    height: 5vh!important;
+}
+</style>
